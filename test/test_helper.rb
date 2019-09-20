@@ -124,3 +124,11 @@ end
 class ActionController::TestCase
   include Devise::Test::ControllerHelpers
 end
+
+def user_sign_in  user
+   visit root_path 
+   click_on class: 'btn btn-default'
+   fill_in id: 'user_email',    with:  "fake@fake.com"#"#{user.email}"
+   fill_in id: 'user_password', with:  "user1234"
+   click_on class: 'form-control btn-primary'
+  end
