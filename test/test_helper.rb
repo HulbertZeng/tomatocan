@@ -126,7 +126,7 @@ class ActionController::TestCase
 end
 
 def user_sign_in  user
-   visit root_path 
+   #visit root_path 
    click_on class: 'btn btn-default'
    fill_in id: 'user_email',    with:  "fake@fake.com"#"#{user.email}"
    fill_in id: 'user_password', with:  "user1234"

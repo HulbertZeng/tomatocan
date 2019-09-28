@@ -17,16 +17,13 @@ class TimeslotsTest < ApplicationSystemTestCase
 
   test "creating a Timeslot" do
     visit timeslots_url
-    click_on "New Timeslot"
-
     user_sign_in  users
 
-    visit timeslots_url
     click_on "New Timeslot"
 
-    fill_in "Start At", with: @timeslot.start_at
-    fill_in "End At", with: @timeslot.end_at
-    fill_in "User", with: @timeslot.user_id
+    #fill_in "Start At", with: @timeslot.start_at
+    #fill_in "End At", with: @timeslot.end_at
+    #fill_in "User", with: @timeslot.user_id
     click_on "Create Timeslot"
 
     assert page.has_css?  '.timeslot'
